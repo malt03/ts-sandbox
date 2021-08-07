@@ -1,0 +1,20 @@
+{
+  "name": "@ts/bbb",
+  "version": "1.0.0",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "scripts": {
+    "build": "tsc -b ./tsconfig.build.json ./tsconfig.build-cjs.json",
+    "watch": "tsc -b ./tsconfig.build.json ./tsconfig.build-cjs.json --watch --preserveWatchOutput",
+    "lint": "tsc --noEmit && eslint \"./src/**/*.ts\"",
+    "fix:ts": "eslint --fix \"./src/**/*.ts\"",
+    "test": "jest",
+    "clean": "rm -rf ./lib",
+    "task": "ts-node --project ./tsconfig.build-cjs.json"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "sideEffects": false,
+  "private": true
+}

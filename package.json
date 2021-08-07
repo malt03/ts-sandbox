@@ -1,0 +1,46 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "",
+  "license": "UNLICENSED",
+  "author": "mish",
+  "contributors": [],
+  "scripts": {
+    "deploy-staging:web": "yarn task tasks/deploy/deploy-staging-web",
+    "release:web": "yarn task tasks/deploy/release-web",
+    "debug-server": "./bin/start_dev_server.sh",
+    "generate-server": "yarn workspace @mish/rpc-deploy run generate-server -o $PWD/out/server -s @mish/schemas-rpc -p @server/procedures -i @server/plugins",
+    "task": "ts-node --project ./tsconfig.cjs.json"
+  },
+  "workspaces": [
+    "aaa",
+    "bbb"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/jest-plugin-context": "^2.9.4",
+    "@types/node": "^14.14.32",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "jest": "^26.6.3",
+    "jest-plugin-context": "^2.9.0",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0",
+    "ts-jest": "^26.5.3",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths": "^3.9.0",
+    "type-fest": "^1.0.1",
+    "typescript": "^4.2.3"
+  },
+  "peerDependencies": {},
+  "private": true
+}
