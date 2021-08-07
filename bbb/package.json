@@ -1,10 +1,9 @@
 {
   "name": "@ts/bbb",
   "version": "1.0.0",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "build": "tsc -b ./tsconfig.build.json ./tsconfig.build-cjs.json",
+    "build": "esbuild ./src/index.ts --bundle --platform=node --target=node14 --outdir=dist --minify --sourcemap",
     "watch": "tsc -b ./tsconfig.build.json ./tsconfig.build-cjs.json --watch --preserveWatchOutput",
     "lint": "tsc --noEmit && eslint \"./src/**/*.ts\"",
     "fix:ts": "eslint --fix \"./src/**/*.ts\"",
@@ -13,7 +12,12 @@
     "task": "ts-node --project ./tsconfig.build-cjs.json"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.12.18",
+    "ts-loader": "^9.2.5",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2"
+  },
   "peerDependencies": {},
   "sideEffects": false,
   "private": true

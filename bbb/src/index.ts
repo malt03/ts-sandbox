@@ -1,3 +1,3 @@
-import { add } from "@ts/aaa";
+import { forceThrow } from "@ts/aaa";
 
-console.info(add(1, 2));
+console.info(forceThrow());
